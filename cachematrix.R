@@ -1,8 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Annelise Lynch Intro to R Assignment 2
+## These functions cache the inverse of a matrix
+## Assumption: The input will always be an inversible matrix
 
-## Write a short comment describing this function
-
+## The first function creates a matrix that gets and sets the inverse of the matrix
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -18,10 +18,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## The second function calculates the inverse of the matrixcreated with the first function makeCacheMatrix
+## Before calculating the inverse, ti checks to see if the inverse has already been calculated
+## Returns a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
   m <- x$getinverse()
   if(!is.null(m)) {
     message("getting cached data")
